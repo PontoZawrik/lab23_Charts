@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="lab23_Charts/lab23_Charts.vcxproj" />
+  <Project Path="tasks/tasks.vcxproj" />
 </Solution>
