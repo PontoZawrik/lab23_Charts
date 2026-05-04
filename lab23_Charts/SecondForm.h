@@ -23,6 +23,11 @@ namespace lab23Charts {
 			//
 		}
 
+		SecondForm(double x) {
+			InitializeComponent();
+			this->textBox1->Text = x.ToString();
+		}
+
 	protected:
 		/// <summary>
 		/// Освободить все используемые ресурсы.
@@ -34,6 +39,8 @@ namespace lab23Charts {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::TextBox^ textBox1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,11 +55,27 @@ namespace lab23Charts {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"SecondForm";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->SuspendLayout();
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(13, 26);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(100, 22);
+			this->textBox1->TabIndex = 0;
+			// 
+			// SecondForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(358, 290);
+			this->Controls->Add(this->textBox1);
+			this->Name = L"SecondForm";
+			this->Text = L"SecondForm";
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
 	};
